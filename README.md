@@ -1,7 +1,7 @@
 <h1 align='center'>
-    Auth-Flow
+    AuthFlow
     <br>
-    <a href="https://github.com/j4breu/input.h/blob/main/LICENSE">
+    <a href="https://github.com/j4breu/AuthFlow/blob/main/LICENSE">
     <img
         alt='MIT Logo'
         src='https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=302d41&colorB=5e81ac'/>
