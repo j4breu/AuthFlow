@@ -1,0 +1,38 @@
+<%- include('./doctype.ejs'); %>
+
+  <title>AuthFlow · Log In</title>
+  <style>
+    <%- include('../static/css/layout.css'); %>
+    <%- include('../static/css/login.css'); %>
+  </style>
+
+<%- include('./layout-header.ejs'); %>
+
+  <main>
+    <form action="/auth/login" method="POST" autocomplete="off">
+
+      <div class="areaContainer" id="emailContainer">
+        <label for="email"> Email </label>
+        <input type="email" name="email" class="inputField" id="email">
+      </div>
+
+      <div class="areaContainer" id="passwordContainer">
+        <label for="password"> Password </label>
+        <input type="password" name="password" class="inputField" id="password">
+      </div>
+
+      <div class="areaContainer" id="submitContainer">
+        <input type="submit" id="submit" value="Submit" disabled>
+      </div>
+    </form>
+
+    <aside>
+      <p> New in AuthFlow? <a class="link" href="/auth/registration">Register</a>.</p>
+    </aside>
+  </main>
+
+<script>
+  <%- include('../static/js/login.js'); %>
+</script>
+
+<%- include('./layout-footer.ejs'); %>

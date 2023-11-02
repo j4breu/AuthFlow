@@ -1,0 +1,82 @@
+<%- include('./doctype.ejs'); %>
+
+  <style>
+    <%- include('../static/css/base.css'); %>
+    <%- include('../static/css/profile.css'); %>
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li id="legend"><a href="/" title="Home">AuthFlow</a></li>
+        <li><a href="/auth/logout"><button id="right">Logout</button></a></li>
+    </ul>
+  </header>
+
+  <main>
+    <h1>Profile</h1>
+    <form action="/auth/profile/" method="POST" autocomplete="off">
+
+    <% if( msg !== 'OK' ) { %>
+      <div id="warningMessage">
+        <p>
+          <%= msg %>
+        </p>
+      </div>
+    <% } %>
+
+      <section id="personalSection">
+        <div class="areaContainer" id="firstNameContainer">
+          <label for="firstName"> First name </label>
+          <input type="text" name="firstName" value="<%= user.firstName %>" class="inputField" id="firstName">
+          <p class="inputMessage">The firstname has to be 1 to 12 digits and can only contain letters.</p>
+        </div>
+
+        <div class="areaContainer" id="lastNameContainer">
+          <label for="lastName"> Last name </label>
+          <input type="text" name="lastName" value="<%= user.lastName %>" class="inputField" id="lastName">
+          <p class="inputMessage">The lastname has to be 1 to 12 digits and can only contain letters.</p>
+        </div>
+
+        <div class="areaContainer" id="usernameContainer">
+          <label for="username"> Username </label>
+          <input type="text" name="username" value="<%= user.username %>" class="inputField" id="username">
+          <p class="inputMessage">The username has to be 4 to 16 digits and can only contain lowercase letters,
+            numbers
+            and underscore.</p>
+        </div>
+
+
+        <div class="areaContainer" id="emailContainer">
+          <label for="email"> Email </label>
+          <input type="email" name="email" value="<%= user.email %>" class="inputField" id="email">
+          <p class="inputMessage">The email has a limit of 255 digits and can only contain letters, numbers, points,
+            scripts and underscores.</p>
+        </div>
+      </section>
+
+        <div class="areaContainer" id="passwordContainer">
+          <label for="password"> Password </label>
+          <input type="password" name="password" class="inputField" id="password">
+          <p class="inputMessage">The password has to be 4 to 16 digits and can only contain lowercase letters,
+            numbers
+            and underscore.</p>
+        </div>
+
+        <br>
+      <section id="submitSection">
+
+        <div class="areaContainer" id="submitContainer">
+          <input type="submit" id="submit" value="Submit" disabled>
+        </div>
+      </section>
+    </form>
+  </main>
+
+<script>
+  <%- include('../static/js/profile.js'); %>
+</script>
+
+<%- include('./base-footer.ejs'); %>

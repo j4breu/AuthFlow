@@ -1,0 +1,45 @@
+#warningMessage,
+main { max-width: 670px; }
+
+#personalSection,
+#paymentSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#personalSection { margin-bottom: 10px; }
+
+#submitContainer { position: relative; }
+
+#submit { width: 35%; }
+
+/* Validations */
+.hide { display: none !important; }
+
+.inputMessage { 
+  font-size: 11px;
+  margin: 5px 0 -10px 0;
+  color: #F66060;
+  display: none;
+}
+
+.correct label { color: #2da44e; }
+
+.correct .inputField,
+.correct select { border: 1px solid #2da44e; }
+
+.incorrect label { color: #cf222e; }
+
+.incorrect .inputField,
+.incorrect select { border: 1px solid #cf222e; }
+
+/* Media Queries */
+@media screen and (max-width: 670px) {
+  #warningMessage,
+  main { max-width: 340px; }
+
+  #personalSection { grid-template-columns: 1fr; }
+
+  submit { width: 70%; }
+}

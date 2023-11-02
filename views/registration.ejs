@@ -1,0 +1,76 @@
+<%- include('./doctype.ejs'); %>
+
+  <title>AuthFlow · Registration</title>
+  <style>
+    <%- include('../static/css/layout.css'); %>
+    <%- include('../static/css/registration.css'); %>
+  </style>
+</head>
+
+<%- include('./layout-header.ejs'); %>
+
+  <main>
+    <form action="/auth/registration/" method="POST" autocomplete="off">
+      <section id="personalSection">
+        <div class="areaContainer" id="firstNameContainer">
+          <label for="firstName"> First name </label>
+          <input type="text" name="firstName" class="inputField" id="firstName">
+          <p class="inputMessage">The firstname has to be 1 to 12 digits and can only contain letters.</p>
+        </div>
+
+        <div class="areaContainer" id="lastNameContainer">
+          <label for="lastName"> Last name </label>
+          <input type="text" name="lastName" class="inputField" id="lastName">
+          <p class="inputMessage">The lastname has to be 1 to 12 digits and can only contain letters.</p>
+        </div>
+
+        <div class="areaContainer" id="usernameContainer">
+          <label for="username"> Username </label>
+          <input type="text" name="username" class="inputField" id="username">
+          <p class="inputMessage">The username has to be 4 to 16 digits and can only contain lowercase letters,
+            numbers
+            and underscore.</p>
+        </div>
+
+
+        <div class="areaContainer" id="emailContainer">
+          <label for="email"> Email </label>
+          <input type="email" name="email" class="inputField" id="email">
+          <p class="inputMessage">The email has a limit of 255 digits and can only contain letters, numbers, points,
+            scripts and underscores.</p>
+        </div>
+      </section>
+
+        <div class="areaContainer" id="passwordContainer">
+          <label for="password"> Password </label>
+          <input type="password" name="password" class="inputField" id="password">
+          <p class="inputMessage">The password has to be 4 to 16 digits and can only contain lowercase letters,
+            numbers
+            and underscore.</p>
+        </div>
+
+        <br>
+      <section id="submitSection">
+        <div class="areaContainer" id="checkContainer">
+          <label for="check">
+            <input type="checkbox" id="check">
+            I accept the <a class="link" href="#">terms and conditions</a>.
+          </label>
+        </div>
+
+        <div class="areaContainer" id="submitContainer">
+          <input type="submit" id="submit" value="Submit" disabled>
+        </div>
+      </section>
+    </form>
+
+    <aside>
+      <p> Already have an account? <a class="link" href="/auth/login">Log in</a>.</p>
+    </aside>
+  </main>
+
+<script>
+  <%- include('../static/js/registration.js'); %>
+</script>
+
+<%- include('./layout-footer.ejs'); %>

@@ -1,0 +1,14 @@
+#warningMessage,
+main { max-width: 340px; }
+
+#passwordContainer { position:relative; }
+
+#passwordContainer a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.inputField { margin-bottom: 16px; }
+
+#submit { width: 70%; }

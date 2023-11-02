@@ -1,0 +1,15 @@
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li id="legend"><a href="/" title="Home">AuthFlow</a></li>
+      <% if (!session.cookie) {%>
+        <li><a href="/auth/registration"><button id="right">Register</button></a></li>
+        <li><a href="/auth/login"><button id="left">Log in</button></a></li>
+      <% } else { %>
+        <li><a href="/auth/profile"><button id="left">Profile</button></a></li>
+        <li><a href="/auth/logout"><button id="right">Logout</button></a></li>
+      <% }; %>
+    </ul>
+  </header>
