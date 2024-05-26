@@ -16,6 +16,7 @@
 &nbsp;
 
 ### ✨ Overview
+
 This project avoids the abstractions to demonstrate backend expertise, applying previous knowledge to navigate an unfamiliar server framework.
 
 It also provides an API endpoint that handles JSON requests to the SQLite3 database.
@@ -25,7 +26,7 @@ It also provides an API endpoint that handles JSON requests to the SQLite3 datab
 ### 🔌 Installation
 
 1. Clone the repository, `git clone https://github.com/j4breu/AuthFlow`.
-2. Check your node version, it use `node` > `20`.
+2. Check your `node` version, we recommend `20.x` in order to avoid problems with better-sqlite3.
 3. Install the dependencies by running `npm install`.
 
 &nbsp;
@@ -86,11 +87,11 @@ It also provides an API endpoint that handles JSON requests to the SQLite3 datab
 
 > Improvements?
 
-* Don't hesitate to create a PR.
+- Don't hesitate to create a PR.
 
 > Problems?
 
-* Feel free to open a new issue!
+- Feel free to open a new issue!
 
 &nbsp;
 
